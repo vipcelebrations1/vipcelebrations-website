@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIP Celebrations — Best Event & Party Decorators in Waidhan, Singrauli</title>
+  <meta name="description" content="VIP Celebrations - Premier balloon decoration, theme birthdays, haldi stages, baby shower setups in Nawanagar, Waidhan, Singrauli (MP)." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandNavy: '#070b16',
+            brandCard: '#0f172a',
+            brandGold: '#d4af37',
+            brandGoldHover: '#b89628',
+            brandCream: '#f8f9fa',
+          },
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fce08c 0%, #d4af37 50%, #aa820a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #d4af37 0%, #b89628 100%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-brandNavy text-slate-100 font-sans min-h-screen flex flex-col selection:bg-brandGold selection:text-brandNavy">
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-brandNavy/95 backdrop-blur-md border-b border-brandGold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full border-2 border-brandGold flex items-center justify-center bg-brandCard shadow-md">
+            <i class="ph-bold ph-sparkle text-brandGold text-xl"></i>
+          </div>
+          <div>
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text block leading-tight">VIP CELEBRATIONS</span>
+            <span class="text-[10px] tracking-widest text-slate-400 uppercase">Waidhan, Singrauli</span>
+          </div>
+        </a>
+
+        <!-- Search Bar (Header) -->
+        <div class="hidden md:flex flex-1 max-w-md mx-6">
+          <form onsubmit="handleSearch(event)" class="w-full relative">
+            <input 
+              id="desktopSearchInput" 
+              type="text" 
+              placeholder="Search decor (e.g. bday under 5000, haldi, jungle)..."
+              class="w-full bg-brandCard border border-brandGold/30 focus:border-brandGold rounded-full py-2.5 pl-11 pr-4 text-xs text-slate-200 placeholder-slate-400 outline-none transition"
+            />
+            <i class="ph-bold ph-magnifying-glass absolute left-4 top-3 text-brandGold text-sm"></i>
+          </form>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-5 text-xs font-semibold">
+          <a href="#home" class="hover:text-brandGold transition">Home</a>
+          <a href="#posts" class="hover:text-brandGold transition">Our Work</a>
+          <a href="#categories" class="hover:text-brandGold transition">Categories</a>
+          <a href="#photos" class="hover:text-brandGold transition">Photos</a>
+          <a href="#videos" class="hover:text-brandGold transition">Videos</a>
+          <a href="#reviews" class="hover:text-brandGold transition">Reviews</a>
+          <a href="#location" class="hover:text-brandGold transition">Location</a>
+          <a href="#enquiry" class="bg-brandGold text-brandNavy font-bold px-4 py-2 rounded-full hover:bg-brandGoldHover transition shadow">Enquiry</a>
+          <a href="#admin" class="border border-brandGold/40 text-brandGold px-3 py-1.5 rounded-full hover:bg-brandGold/10 transition text-[11px] flex items-center gap-1">
+            <i class="ph-bold ph-lock-key"></i> Admin
+          </a>
+        </nav>
+
+        <!-- Mobile Buttons -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button onclick="toggleMobileSearch()" class="p-2 text-slate-300 hover:text-brandGold text-xl">
+            <i class="ph-bold ph-magnifying-glass"></i>
+          </button>
+          <button onclick="toggleMobileMenu()" class="p-2 text-slate-300 hover:text-brandGold text-2xl">
+            <i class="ph-bold ph-list"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Search Drawer -->
+    <div id="mobileSearchDrawer" class="hidden px-4 pb-4 md:hidden">
+      <form onsubmit="handleSearch(event)" class="relative">
+        <input 
+          id="mobileSearchInput" 
+          type="text" 
+          placeholder="Search decor (e.g. bday under 5000)..."
+          class="w-full bg-brandCard border border-brandGold/40 rounded-full py-2 pl-10 pr-4 text-xs text-slate-200 placeholder-slate-400 outline-none"
+        />
+        <i class="ph-bold ph-magnifying-glass absolute left-3.5 top-2.5 text-brandGold text-sm"></i>
+      </form>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobileNavMenu" class="hidden lg:hidden bg-brandCard border-b border-brandGold/20 px-6 py-4 space-y-3 text-xs font-medium">
+      <a href="#home" onclick="toggleMobileMenu()" class="block py-1 hover:text-brandGold">Home</a>
+      <a href="#posts" onclick="toggleMobileMenu()" class="block py-1 hover:text-brandGold">Our Work</a>
+      <a href="#categories" onclick="toggleMobileMenu()" class="block py-1 hover:text-brandGold">Categories</a>
+      <a href="#photos" onclick="toggleMobileMenu()" class="block py-1 hover:text-brandGold">Photos</a>
+      <a href="#videos" onclick="toggleMobileMenu()" class="block py-1 hover:text-brandGold">Videos</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block py-1 hover:text-brandGold">Reviews</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block py-1 hover:text-brandGold">Location</a>
+      <div class="flex items-center gap-3 pt-2">
+        <a href="#enquiry" onclick="toggleMobileMenu()" class="bg-brandGold text-brandNavy font-bold px-4 py-2 rounded-full">Book Enquiry</a>
+        <a href="#admin" onclick="toggleMobileMenu()" class="border border-brandGold/50 text-brandGold px-3 py-2 rounded-full">Admin Panel</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= APP ROUTE CONTAINER ================= -->
+  <main id="app" class="flex-1">
+    <!-- View content loaded via Router -->
+  </main>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a 
+    href="https://wa.me/919691683699?text=Hello%20VIP%20Celebrations,%20mujhe%20decoration%20ke%20baare%20me%20jaankari%20chahiye." 
+    target="_blank" 
+    class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-transform border border-white/30"
+    title="WhatsApp VIP Celebrations"
+  >
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 2C6.516 2 2.031 6.484 2.031 12c0 2.188.703 4.219 1.906 5.891L2 22l4.25-1.891C7.875 21.219 9.875 22 12.031 22c5.516 0 10-4.484 10-10s-4.484-10-10-10zm0 18.25c-1.844 0-3.578-.609-5-1.656l-.359-.25-2.516 1.125 1.141-2.453-.25-.375c-1.125-1.469-1.781-3.266-1.781-5.141 0-4.547 3.703-8.25 8.25-8.25s8.25 3.703 8.25 8.25-3.703 8.25-8.25 8.25zm4.516-6.172c-.25-.125-1.469-.719-1.688-.813-.234-.094-.406-.125-.578.125-.172.25-.672.813-.828.984-.156.172-.313.203-.563.078-.25-.125-1.063-.391-2.031-1.25-.75-.672-1.266-1.5-1.422-1.75-.156-.25-.016-.391.109-.516.109-.109.25-.281.375-.422.125-.141.172-.25.25-.422.078-.172.047-.328-.016-.453-.063-.125-.578-1.391-.797-1.906-.219-.516-.438-.438-.594-.438h-.516c-.172 0-.453.063-.688.328-.234.25-.906.891-.906 2.172s.938 2.516 1.063 2.688c.125.172 1.844 2.813 4.469 3.938.625.266 1.109.438 1.484.563.625.203 1.188.172 1.641.109.5-.078 1.469-.609 1.672-1.203.203-.594.203-1.109.141-1.203-.063-.094-.219-.156-.469-.281z"/>
+    </svg>
+  </a>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black/90 border-t border-brandGold/20 pt-12 pb-8 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="font-serif text-base font-bold gold-gradient-text mb-3">VIP CELEBRATIONS</h3>
+        <p class="text-slate-400 leading-relaxed mb-3">
+          Nawanagar, Waidhan, Singrauli, Madhya Pradesh - 486886.<br>
+          Theme Birthday, Baby Shower, Haldi Stage & Balloon Artistry.
+        </p>
+        <p class="text-brandGold font-semibold">WhatsApp: +91 9691683699</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Navigation</h4>
+        <ul class="space-y-2">
+          <li><a href="#posts" class="hover:text-brandGold">Our Work Portfolio</a></li>
+          <li><a href="#categories" class="hover:text-brandGold">Event Categories</a></li>
+          <li><a href="#photos" class="hover:text-brandGold">All Work Photos</a></li>
+          <li><a href="#videos" class="hover:text-brandGold">YouTube Videos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Connect & Reviews</h4>
+        <ul class="space-y-2">
+          <li><a href="https://g.co/kgs/PtgVpTV" target="_blank" class="hover:text-brandGold">Google Reviews (5.0 ★)</a></li>
+          <li><a href="https://maps.app.goo.gl/tCzPvW7MN6eq54O6" target="_blank" class="hover:text-brandGold">Google Maps Directions</a></li>
+          <li><a href="https://www.instagram.com/vip_celebrations" target="_blank" class="hover:text-brandGold">Instagram Page</a></li>
+          <li><a href="https://www.facebook.com/vipcelebrations1" target="_blank" class="hover:text-brandGold">Facebook Page</a></li>
+          <li><a href="https://www.youtube.com/@vipcelebrations" target="_blank" class="hover:text-brandGold">YouTube Channel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">VIP Admin</h4>
+        <p class="text-slate-400 mb-3">Easily manage posts, upload photos and update approximate budgets directly from your browser.</p>
+        <a href="#admin" class="inline-block bg-brandCard border border-brandGold/40 text-brandGold px-4 py-1.5 rounded-lg hover:bg-brandGold/10 transition">
+          Open Admin Panel →
+        </a>
+      </div>
+    </div>
+    <div class="border-t border-slate-800/80 pt-6 text-center text-[11px] text-slate-500">
+      &copy; 2026 VIP Celebrations, Nawanagar, Waidhan. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS & DATABASE ================= -->
+  <script>
+    // 1. DEFAULT DATA INITIALIZATION (Stored in Browser LocalStorage so Admin edits persist)
+    const DEFAULT_CATEGORIES = [
+      { id: "cat_bday", name: "Birthday Decoration" },
+      { id: "cat_theme", name: "Theme Based Decoration" },
+      { id: "cat_anni", name: "Anniversary" },
+      { id: "cat_baby", name: "Baby Shower" },
+      { id: "cat_welcome", name: "Welcome Baby" },
+      { id: "cat_anna", name: "Annaprashan" },
+      { id: "cat_balloon", name: "Balloon Decoration" },
+      { id: "cat_stage", name: "Wedding Stage" },
+      { id: "cat_haldi", name: "Haldi – Mehandi" },
+      { id: "cat_entry", name: "Entry Setup" }
+    ];
+
+    const DEFAULT_POSTS = [
+      {
+        id: "post_1",
+        title: "Royal Jungle Theme 1st Birthday Setup",
+        category: "Theme Based Decoration",
+        subCategory: "Jungle Theme",
+        approxCost: 7500,
+        workingDate: "2026-03-24",
+        venue: "Hotel Rajshree, Waidhan",
+        thumbnail: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format&fit=crop&q=80",
+        photos: [
+          "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format&fit=crop&q=80",
+          "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop&q=80"
+        ],
+        description: "Green and golden organic balloon arch with safari animal cutouts, marquee LED 1 number, and customized stage backdrop."
+      },
+      {
+        id: "post_2",
+        title: "Traditional Yellow Haldi Stage with Floral Backdrop",
+        category: "Haldi – Mehandi",
+        subCategory: "Haldi Backdrop",
+        approxCost: 4500,
+        workingDate: "2026-03-15",
+        venue: "Nawanagar, Singrauli",
+        thumbnail: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80",
+        photos: ["https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"],
+        description: "Marigold genda hanging strings, bright yellow drapes, cane stool seating, and traditional brass urlis."
+      },
+      {
+        id: "post_3",
+        title: "Pastel Dream Baby Shower Floral Ring Setup",
+        category: "Baby Shower",
+        subCategory: "Ring Backdrop",
+        approxCost: 2800,
+        workingDate: "2026-02-18",
+        venue: "Vindhya Nagar Road, Singrauli",
+        thumbnail: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80",
+        photos: ["https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80"],
+        description: "Pastel pink and white balloon ring arch with 'Baby Coming Soon' neon flex sign and baby props."
+      },
+      {
+        id: "post_4",
+        title: "Elegant Silver & Blue 25th Silver Jubilee Stage",
+        category: "Anniversary",
+        subCategory: "Silver Jubilee",
+        approxCost: 12000,
+        workingDate: "2026-02-10",
+        venue: "Singrauli Club Ground, Waidhan",
+        thumbnail: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&auto=format&fit=crop&q=80",
+        photos: ["https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&auto=format&fit=crop&q=80"],
+        description: "Double metallic ring setup with chrome silver and royal blue balloons, cold pyro entry, and spotlights."
+      },
+      {
+        id: "post_5",
+        title: "Cute Welcome Baby Home Decoration",
+        category: "Welcome Baby",
+        subCategory: "Room Decor",
+        approxCost: 2200,
+        workingDate: "2026-01-28",
+        venue: "Nawanagar Residential",
+        thumbnail: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&auto=format&fit=crop&q=80",
+        photos: ["https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&auto=format&fit=crop&q=80"],
+        description: "Door welcome arch with baby boy/girl foil balloons, fairy lights, and ceiling helium balloons."
+      },
+      {
+        id: "post_6",
+        title: "Grand Wedding Entry Tunnel with Pixel LED",
+        category: "Entry Setup",
+        subCategory: "Grand Entry",
+        approxCost: 18000,
+        workingDate: "2026-01-14",
+        venue: "Waidhan Marriage Hall",
+        thumbnail: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&auto=format&fit=crop&q=80",
+        photos: ["https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&auto=format&fit=crop&q=80"],
+        description: "Illuminated floral archway tunnel with pixel LED controllers and fog dry ice machine effect."
+      }
+    ];
+
+    function getDB() {
+      const posts = localStorage.getItem('vip_posts');
+      const cats = localStorage.getItem('vip_cats');
+      return {
+        posts: posts ? JSON.parse(posts) : DEFAULT_POSTS,
+        categories: cats ? JSON.parse(cats) : DEFAULT_CATEGORIES
+      };
+    }
+
+    function saveDB(posts, cats) {
+      if (posts) localStorage.setItem('vip_posts', JSON.stringify(posts));
+      if (cats) localStorage.setItem('vip_cats', JSON.stringify(cats));
+    }
+
+    // 2. SEARCH ENGINE (Typo Tolerant + Budget Extractor)
+    const SYNONYM_MAP = {
+      "bday": "birthday",
+      "barthday": "birthday",
+      "bithday": "birthday",
+      "brithday": "birthday",
+      "dekoration": "decoration",
+      "decor": "decoration",
+      "decortion": "decoration",
+      "haldi": "haldi",
+      "haldy": "haldi",
+      "mehndi": "mehandi",
+      "babyshower": "baby shower",
+      "baloon": "balloon",
+      "balon": "balloon"
+    };
+
+    function parseSearchQuery(queryText) {
+      let raw = queryText.toLowerCase().trim();
+      let maxBudget = null;
+      raw = raw.replace(/(\d+)k/g, (m, p1) => parseInt(p1) * 1000);
+      const budgetMatch = raw.match(/(?:under|below|in|at|around|upto|within|budget)?\s*₹?\s*(\d{3,6})/i);
+      if (budgetMatch) {
+        maxBudget = parseInt(budgetMatch[1]);
+        raw = raw.replace(budgetMatch[0], "").trim();
+      }
+      const words = raw.split(/\s+/).filter(w => !["decoration", "decor", "setup", "in", "at", "for", "ke", "ka", "ki"].includes(w) && w.length > 0);
+      const normalizedWords = words.map(word => SYNONYM_MAP[word] || word);
+      return { keywords: normalizedWords, maxBudget: maxBudget };
+    }
+
+    function searchFilter(posts, query) {
+      if (!query.trim()) return posts;
+      const { keywords, maxBudget } = parseSearchQuery(query);
+      return posts.filter(post => {
+        if (maxBudget !== null && post.approxCost > maxBudget) return false;
+        if (keywords.length === 0) return true;
+        const corpus = `${post.title} ${post.category} ${post.subCategory} ${post.description} ${post.venue}`.toLowerCase();
+        return keywords.some(k => corpus.includes(k));
+      });
+    }
+
+    // 3. PAGE VIEW TEMPLATES
+    function viewHome() {
+      const { posts, categories } = getDB();
+      const recentPosts = posts.slice(0, 10);
+      return `
+        <!-- HERO SLIDER SECTION -->
+        <section class="relative bg-gradient-to-b from-brandCard to-brandNavy py-14 sm:py-20 border-b border-brandGold/20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-brandGold/10 border border-brandGold/30 text-brandGold text-[11px] font-bold uppercase tracking-wider mb-4">
+              ✨ Best Event Decorators • Waidhan, Singrauli
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white mb-5 leading-tight">
+              Making Every Occasion <br><span class="gold-gradient-text">A Truly VIP Celebration</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-xs sm:text-sm text-slate-300 mb-8 leading-relaxed">
+              Theme Birthdays, Baby Showers, Royal Haldi Stages, Pixel LED setups & Balloon Art in Nawanagar, Waidhan & across Singrauli.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <a href="#posts" class="bg-brandGold text-brandNavy font-bold px-6 py-2.5 rounded-full hover:bg-brandGoldHover transition text-xs shadow-lg">
+                View Decoration Works
+              </a>
+              <a href="#enquiry" class="border border-brandGold/50 text-brandGold font-semibold px-6 py-2.5 rounded-full hover:bg-brandGold/10 transition text-xs">
+                Check Approximate Cost
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- PREVIEW: CATEGORIES (Max 10) -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-serif font-bold text-white">Service Categories</h2>
+              <p class="text-[11px] text-slate-400">Choose an event type to see previous decoration setups</p>
+            </div>
+            <a href="#categories" class="text-xs text-brandGold font-semibold hover:underline">View All →</a>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5">
+            ${categories.slice(0, 10).map(cat => `
+              <a href="#search?q=${encodeURIComponent(cat.name)}" class="bg-brandCard border border-slate-800 hover:border-brandGold/60 p-4 rounded-xl text-center group transition flex flex-col items-center justify-center gap-2">
+                <div class="w-10 h-10 rounded-full bg-brandGold/10 text-brandGold flex items-center justify-center text-xl group-hover:scale-110 transition">
+                  <i class="ph-bold ph-sparkle"></i>
+                </div>
+                <span class="text-xs font-semibold text-slate-200 group-hover:text-brandGold transition">${cat.name}</span>
+              </a>
+            `).join('')}
+          </div>
+        </section>
+
+        <!-- PREVIEW: LATEST 10 POSTS -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-800">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-serif font-bold text-white">Recent Decoration Work</h2>
+              <p class="text-[11px] text-slate-400">Latest completed events in Waidhan & Singrauli</p>
+            </div>
+            <a href="#posts" class="text-xs text-brandGold font-semibold hover:underline">View All (${posts.length}) →</a>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            ${recentPosts.map(p => postCard(p)).join('')}
+          </div>
+        </section>
+
+        <!-- PREVIEW: LATEST 20 PHOTOS -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-800">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-serif font-bold text-white">Work Photos Gallery</h2>
+              <p class="text-[11px] text-slate-400">Clicking any photo opens its full decoration details</p>
+            </div>
+            <a href="#photos" class="text-xs text-brandGold font-semibold hover:underline">View All Photos →</a>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            ${posts.slice(0, 20).map(p => `
+              <a href="#post-detail?id=${p.id}" class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-900 border border-slate-800 group relative block">
+                <img src="${p.thumbnail}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" />
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center p-2 text-center">
+                  <span class="text-[11px] text-white font-bold">${p.title}</span>
+                </div>
+              </a>
+            `).join('')}
+          </div>
+        </section>
+      `;
+    }
+
+    function postCard(post) {
+      return `
+        <div class="bg-brandCard border border-slate-800 hover:border-brandGold/40 rounded-xl overflow-hidden flex flex-col group transition shadow">
+          <a href="#post-detail?id=${post.id}" class="block relative aspect-[4/3] overflow-hidden bg-slate-900">
+            <img src="${post.thumbnail}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" />
+            <span class="absolute top-2 right-2 bg-black/80 backdrop-blur-sm text-brandGold text-[10px] font-bold px-2 py-0.5 rounded-full border border-brandGold/30">
+              Approx ₹${Number(post.approxCost).toLocaleString('en-IN')}
+            </span>
+          </a>
+          <div class="p-3.5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[9px] text-brandGold font-semibold uppercase tracking-wider mb-1">${post.category}</div>
+              <a href="#post-detail?id=${post.id}" class="text-xs font-bold text-white line-clamp-1 hover:text-brandGold transition mb-1">
+                ${post.title}
+              </a>
+              <div class="text-[10px] text-slate-400 flex items-center gap-1 mb-3">
+                <i class="ph-bold ph-map-pin text-brandGold"></i>
+                <span class="truncate">${post.venue || 'Waidhan'}</span>
+              </div>
+            </div>
+            <a 
+              href="https://wa.me/919691683699?text=${encodeURIComponent('Hello VIP Celebrations, I am interested in: ' + post.title + ' (Approx: ₹' + post.approxCost + ')')}" 
+              target="_blank" 
+              class="w-full text-center bg-brandGold/10 hover:bg-brandGold text-brandGold hover:text-brandNavy text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1"
+            >
+              <i class="ph-bold ph-whatsapp-logo text-sm"></i> Book on WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    function viewAllPosts() {
+      const { posts, categories } = getDB();
+      return `
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div class="mb-6">
+            <h1 class="text-2xl sm:text-3xl font-serif font-bold text-white">All Decoration Works</h1>
+            <p class="text-xs text-slate-400 mt-1">Filter by budget range or category</p>
+          </div>
+          
+          <!-- Filters -->
+          <div class="bg-brandCard border border-slate-800 p-3.5 rounded-xl mb-6 flex flex-wrap gap-3 items-center justify-between text-xs">
+            <div class="flex flex-wrap gap-2.5 items-center">
+              <select id="filterBudget" onchange="runFilters()" class="bg-slate-900 border border-slate-700 text-slate-200 rounded-lg px-2.5 py-1.5 outline-none">
+                <option value="all">All Budgets</option>
+                <option value="3000">Under ₹3,000</option>
+                <option value="5000">Under ₹5,000</option>
+                <option value="8000">Under ₹8,000</option>
+                <option value="10000">Under ₹10,000</option>
+                <option value="20000">Under ₹20,000</option>
+                <option value="50000">Under ₹50,000</option>
+              </select>
+              <select id="filterCategory" onchange="runFilters()" class="bg-slate-900 border border-slate-700 text-slate-200 rounded-lg px-2.5 py-1.5 outline-none">
+                <option value="all">All Categories</option>
+                ${categories.map(c => `<option value="${c.name}">${c.name}</option>`).join('')}
+              </select>
+            </div>
+            <button onclick="resetFilters()" class="text-brandGold hover:underline">Clear Filters</button>
+          </div>
+
+          <div id="postsList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            ${posts.map(p => postCard(p)).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function viewSearch(query) {
+      const { posts } = getDB();
+      const results = searchFilter(posts, query);
+      const parsed = parseSearchQuery(query);
+      return `
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div class="border-b border-slate-800 pb-5 mb-6">
+            <h1 class="text-2xl font-serif font-bold text-white">Search Results: <span class="gold-gradient-text">"${query}"</span></h1>
+            <p class="text-xs text-slate-400 mt-1">
+              Found ${results.length} matching setups 
+              ${parsed.maxBudget ? `• Budget ceiling: ₹${parsed.maxBudget.toLocaleString('en-IN')}` : ''}
+            </p>
+          </div>
+          ${results.length === 0 ? `
+            <div class="text-center py-16 bg-brandCard rounded-2xl border border-dashed border-slate-800">
+              <p class="text-sm text-slate-300 mb-4">No decorations match this exact filter.</p>
+              <a href="https://wa.me/919691683699" target="_blank" class="inline-block bg-brandGold text-brandNavy text-xs font-bold px-5 py-2 rounded-full">
+                Direct WhatsApp Par Puchhein
+              </a>
+            </div>
+          ` : `
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              ${results.map(p => postCard(p)).join('')}
+            </div>
+          `}
+        </div>
+      `;
+    }
+
+    function viewPostDetail(id) {
+      const { posts } = getDB();
+      const post = posts.find(p => p.id === id) || posts[0];
+      return `
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <a href="#posts" class="text-xs text-brandGold inline-flex items-center gap-1 mb-4 hover:underline">
+            ← Back to All Posts
+          </a>
+          <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-5 mb-5">
+              <div>
+                <span class="text-[11px] text-brandGold font-bold uppercase tracking-wider">${post.category} • ${post.subCategory || 'Theme'}</span>
+                <h1 class="text-2xl sm:text-3xl font-serif font-bold text-white mt-1">${post.title}</h1>
+                <p class="text-xs text-slate-400 mt-1">📍 ${post.venue || 'Waidhan, Singrauli'} • 🗓 ${post.workingDate || 'Recent'}</p>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest block">Approximate Cost</span>
+                <span class="text-2xl sm:text-3xl font-bold text-brandGold">₹${Number(post.approxCost).toLocaleString('en-IN')}</span>
+              </div>
+            </div>
+
+            <!-- Photos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              ${(post.photos || [post.thumbnail]).map(img => `
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-black/40 border border-slate-800">
+                  <img src="${img}" alt="${post.title}" class="w-full h-full object-cover" />
+                </div>
+              `).join('')}
+            </div>
+
+            <div class="mb-6">
+              <h3 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Decoration Details</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${post.description}</p>
+            </div>
+
+            <!-- WhatsApp Booking CTA -->
+            <div class="bg-brandNavy border border-brandGold/30 p-5 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <h4 class="text-sm font-bold text-white">Want this exact decoration for your date?</h4>
+                <p class="text-[11px] text-slate-400">Customizations available for budget, size and color themes.</p>
+              </div>
+              <a 
+                href="https://wa.me/919691683699?text=${encodeURIComponent('Hello VIP Celebrations, I want details regarding: ' + post.title + ' (Approx Cost: ₹' + post.approxCost + ')')}" 
+                target="_blank"
+                class="bg-[#25D366] text-white font-bold px-5 py-2.5 rounded-full text-xs flex items-center gap-1.5 whitespace-nowrap"
+              >
+                <i class="ph-bold ph-whatsapp-logo text-base"></i> Book on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function viewLocation() {
+      return `
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <h1 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">Our Location</h1>
+          <p class="text-xs text-slate-400 mb-6">Visit our office or get directions directly on Google Maps</p>
+          
+          <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8">
+            <h3 class="text-lg font-bold text-white mb-2">VIP CELEBRATIONS</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4">
+              Nawanagar, Waidhan, Singrauli, Madhya Pradesh - 486886, India.
+            </p>
+            <p class="text-xs text-brandGold font-semibold mb-6">Contact / WhatsApp: +91 9691683699</p>
+
+            <div class="flex flex-wrap gap-4">
+              <a href="https://maps.app.goo.gl/tCzPvW7MN6eq54O6" target="_blank" class="bg-brandGold text-brandNavy font-bold px-6 py-2.5 rounded-full text-xs hover:bg-brandGoldHover transition flex items-center gap-2">
+                <i class="ph-bold ph-navigation-arrow text-base"></i> Get Google Maps Directions
+              </a>
+              <a href="https://g.co/kgs/PtgVpTV" target="_blank" class="border border-brandGold/50 text-brandGold font-semibold px-6 py-2.5 rounded-full text-xs hover:bg-brandGold/10 transition flex items-center gap-2">
+                <i class="ph-bold ph-star text-base"></i> Read Google Reviews
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function viewEnquiry() {
+      return `
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <h1 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">Book Decoration Enquiry</h1>
+          <p class="text-xs text-slate-400 mb-6">Fill this simple form and it will prepare your booking message for WhatsApp.</p>
+          
+          <form onsubmit="submitEnquiry(event)" class="bg-brandCard border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4 text-xs">
+            <div>
+              <label class="block text-slate-300 font-semibold mb-1">Your Name *</label>
+              <input id="enqName" type="text" required placeholder="e.g. Ramesh Singh" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white outline-none focus:border-brandGold" />
+            </div>
+            <div>
+              <label class="block text-slate-300 font-semibold mb-1">Event Address / Location *</label>
+              <input id="enqLocation" type="text" required placeholder="e.g. Nawanagar, Waidhan" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white outline-none focus:border-brandGold" />
+            </div>
+            <div>
+              <label class="block text-slate-300 font-semibold mb-1">Occasion / Decoration Purpose *</label>
+              <input id="enqOccasion" type="text" required placeholder="e.g. 1st Birthday, Baby Shower, Haldi" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white outline-none focus:border-brandGold" />
+            </div>
+            <div>
+              <label class="block text-slate-300 font-semibold mb-1">Your Expected Budget (₹)</label>
+              <input id="enqBudget" type="number" placeholder="e.g. 5000" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white outline-none focus:border-brandGold" />
+            </div>
+            <div>
+              <label class="block text-slate-300 font-semibold mb-1">Special Requirements / Notes</label>
+              <textarea id="enqNotes" rows="3" placeholder="Colors, hall size, theme idea..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white outline-none focus:border-brandGold"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brandGold text-brandNavy font-bold py-3 rounded-xl hover:bg-brandGoldHover transition text-xs shadow-lg flex items-center justify-center gap-2">
+              <i class="ph-bold ph-whatsapp-logo text-base"></i> Send Booking on WhatsApp
+            </button>
+          </form>
+        </div>
+      `;
+    }
+
+    // 4. ADMIN PANEL (Simple & Non-technical interface)
+    function viewAdmin() {
+      const { posts, categories } = getDB();
+      return `
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-5 mb-6">
+            <div>
+              <h1 class="text-2xl font-serif font-bold text-white flex items-center gap-2">
+                <i class="ph-bold ph-lock-key text-brandGold"></i> VIP Admin Panel
+              </h1>
+              <p class="text-xs text-slate-400 mt-0.5">Add new decorations, manage approximate pricing and photos without coding.</p>
+            </div>
+            <button onclick="openAddPostModal()" class="bg-brandGold text-brandNavy font-bold px-4 py-2 rounded-full text-xs flex items-center gap-1.5 hover:bg-brandGoldHover transition shadow">
+              <i class="ph-bold ph-plus-circle text-base"></i> Add New Decoration Post
+            </button>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+            <div class="bg-brandCard border border-slate-800 p-4 rounded-xl">
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Total Posts</span>
+              <span class="text-2xl font-bold text-brandGold">${posts.length}</span>
+            </div>
+            <div class="bg-brandCard border border-slate-800 p-4 rounded-xl">
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Categories</span>
+              <span class="text-2xl font-bold text-white">${categories.length}</span>
+            </div>
+            <div class="bg-brandCard border border-slate-800 p-4 rounded-xl col-span-2 sm:col-span-1">
+              <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Admin Status</span>
+              <span class="text-sm font-bold text-emerald-400 mt-1 inline-flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Active (Ready to Deploy)
+              </span>
+            </div>
+          </div>
+
+          <!-- Existing Posts Table -->
+          <div class="bg-brandCard border border-slate-800 rounded-xl overflow-hidden">
+            <div class="p-4 border-b border-slate-800 font-bold text-xs text-white">Current Uploaded Decorations</div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs text-slate-300">
+                <thead class="bg-slate-900/60 text-slate-400 text-[10px] uppercase border-b border-slate-800">
+                  <tr>
+                    <th class="p-3">Photo</th>
+                    <th class="p-3">Title</th>
+                    <th class="p-3">Category</th>
+                    <th class="p-3">Approx Cost</th>
+                    <th class="p-3 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/60">
+                  ${posts.map(p => `
+                    <tr class="hover:bg-slate-800/30">
+                      <td class="p-3">
+                        <img src="${p.thumbnail}" alt="" class="w-12 h-9 object-cover rounded-md" />
+                      </td>
+                      <td class="p-3 font-semibold text-white">${p.title}</td>
+                      <td class="p-3">${p.category}</td>
+                      <td class="p-3 text-brandGold font-bold">₹${Number(p.approxCost).toLocaleString('en-IN')}</td>
+                      <td class="p-3 text-right">
+                        <button onclick="deletePost('${p.id}')" class="text-rose-400 hover:text-rose-300 px-2 py-1 rounded text-[11px]">
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Post Modal -->
+        <div id="addModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div class="bg-brandCard border border-brandGold/40 rounded-2xl max-w-lg w-full p-6 text-xs max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-4">
+              <h3 class="font-serif font-bold text-base text-white">Add Decoration Post</h3>
+              <button onclick="closeAddPostModal()" class="text-slate-400 hover:text-white text-lg">&times;</button>
+            </div>
+            <form onsubmit="handleNewPostSubmit(event)" class="space-y-3.5">
+              <div>
+                <label class="block text-slate-300 font-semibold mb-1">Post Title *</label>
+                <input id="modalTitle" required placeholder="e.g. Boss Baby Theme Birthday Decor" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none focus:border-brandGold" />
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-slate-300 font-semibold mb-1">Category *</label>
+                  <select id="modalCategory" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none">
+                    ${categories.map(c => `<option value="${c.name}">${c.name}</option>`).join('')}
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-slate-300 font-semibold mb-1">Approximate Cost (₹) *</label>
+                  <input id="modalCost" type="number" required placeholder="5500" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none focus:border-brandGold" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-slate-300 font-semibold mb-1">Image URL / Link *</label>
+                <input id="modalImage" required placeholder="https://... (Direct photo link)" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none focus:border-brandGold" />
+              </div>
+              <div>
+                <label class="block text-slate-300 font-semibold mb-1">Venue / Location</label>
+                <input id="modalVenue" placeholder="e.g. Nawanagar, Waidhan" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none focus:border-brandGold" />
+              </div>
+              <div>
+                <label class="block text-slate-300 font-semibold mb-1">Description</label>
+                <textarea id="modalDesc" rows="2" placeholder="Balloon colors, props used..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white outline-none focus:border-brandGold"></textarea>
+              </div>
+              <div class="pt-2 flex justify-end gap-2">
+                <button type="button" onclick="closeAddPostModal()" class="px-4 py-2 border border-slate-700 text-slate-300 rounded-lg">Cancel</button>
+                <button type="submit" class="bg-brandGold text-brandNavy font-bold px-5 py-2 rounded-lg">Save & Publish</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      `;
+    }
+
+    // 5. ROUTING & CONTROLLER
+    function router() {
+      const hash = window.location.hash || '#home';
+      const app = document.getElementById('app');
+      window.scrollTo(0, 0);
+
+      if (hash.startsWith('#search')) {
+        const q = new URLSearchParams(hash.replace('#search', '').replace(/^\?/, '')).get('q') || '';
+        app.innerHTML = viewSearch(q);
+      } else if (hash.startsWith('#post-detail')) {
+        const id = new URLSearchParams(hash.replace('#post-detail', '').replace(/^\?/, '')).get('id') || '';
+        app.innerHTML = viewPostDetail(id);
+      } else if (hash === '#posts' || hash === '#photos') {
+        app.innerHTML = viewAllPosts();
+      } else if (hash === '#categories') {
+        app.innerHTML = viewAllPosts();
+      } else if (hash === '#location') {
+        app.innerHTML = viewLocation();
+      } else if (hash === '#enquiry') {
+        app.innerHTML = viewEnquiry();
+      } else if (hash === '#admin') {
+        app.innerHTML = viewAdmin();
+      } else {
+        app.innerHTML = viewHome();
+      }
+    }
+
+    // Helper Action Functions
+    function handleSearch(e) {
+      e.preventDefault();
+      const val = document.getElementById('desktopSearchInput')?.value || document.getElementById('mobileSearchInput')?.value || '';
+      if (!val.trim()) return;
+      window.location.hash = `#search?q=${encodeURIComponent(val.trim())}`;
+      document.getElementById('mobileSearchDrawer')?.classList.add('hidden');
+    }
+
+    function toggleMobileSearch() {
+      document.getElementById('mobileSearchDrawer')?.classList.toggle('hidden');
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileNavMenu')?.classList.toggle('hidden');
+    }
+
+    function runFilters() {
+      const budget = document.getElementById('filterBudget').value;
+      const cat = document.getElementById('filterCategory').value;
+      const { posts } = getDB();
+      let res = posts;
+      if (budget !== 'all') res = res.filter(p => p.approxCost <= parseInt(budget));
+      if (cat !== 'all') res = res.filter(p => p.category === cat);
+      document.getElementById('postsList').innerHTML = res.length > 0 
+        ? res.map(p => postCard(p)).join('') 
+        : '<p class="text-xs text-slate-400 col-span-full py-10 text-center">No matching setups found.</p>';
+    }
+
+    function resetFilters() {
+      document.getElementById('filterBudget').value = 'all';
+      document.getElementById('filterCategory').value = 'all';
+      runFilters();
+    }
+
+    function submitEnquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('enqName').value;
+      const loc = document.getElementById('enqLocation').value;
+      const occ = document.getElementById('enqOccasion').value;
+      const bud = document.getElementById('enqBudget').value;
+      const notes = document.getElementById('enqNotes').value;
+
+      const msg = `*VIP Celebrations Enquiry*%0A*Name:* ${name}%0A*Location:* ${loc}%0A*Occasion:* ${occ}%0A*Budget:* ₹${bud || 'Flexible'}%0A*Notes:* ${notes || 'N/A'}`;
+      window.open(`https://wa.me/919691683699?text=${msg}`, '_blank');
+    }
+
+    // Admin Handlers
+    function openAddPostModal() {
+      document.getElementById('addModal')?.classList.remove('hidden');
+    }
+    function closeAddPostModal() {
+      document.getElementById('addModal')?.classList.add('hidden');
+    }
+    function handleNewPostSubmit(e) {
+      e.preventDefault();
+      const { posts } = getDB();
+      const newPost = {
+        id: 'post_' + Date.now(),
+        title: document.getElementById('modalTitle').value,
+        category: document.getElementById('modalCategory').value,
+        approxCost: parseInt(document.getElementById('modalCost').value) || 0,
+        thumbnail: document.getElementById('modalImage').value,
+        photos: [document.getElementById('modalImage').value],
+        venue: document.getElementById('modalVenue').value || 'Waidhan',
+        description: document.getElementById('modalDesc').value || 'Decor setup by VIP Celebrations',
+        workingDate: new Date().toISOString().split('T')[0]
+      };
+      posts.unshift(newPost);
+      saveDB(posts, null);
+      closeAddPostModal();
+      router();
+    }
+    function deletePost(id) {
+      if (!confirm('Are you sure you want to delete this post?')) return;
+      let { posts } = getDB();
+      posts = posts.filter(p => p.id !== id);
+      saveDB(posts, null);
+      router();
+    }
+
+    window.addEventListener('hashchange', router);
+    window.addEventListener('DOMContentLoaded', router);
+  </script>
+</body>
+</html>
